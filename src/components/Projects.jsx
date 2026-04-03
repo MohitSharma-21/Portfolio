@@ -24,17 +24,17 @@ function ProjectCard({ project, index, inView }) {
     <motion.div
       initial={{ opacity: 0, y: 40 }}
       animate={inView ? { opacity: 1, y: 0 } : {}}
-      transition={{ duration: 0.6, delay: index * 0.15 }}
+      transition={{ duration: 0.6, delay: index * 0.12 }}
       className="group relative glass-card rounded-2xl p-7 hover:border-indigo-500/20 transition-all duration-300 flex flex-col"
     >
-      {/* Glow on hover */}
+      {/* Hover glow */}
       <div className="absolute inset-0 rounded-2xl bg-gradient-to-br from-indigo-600/0 to-purple-600/0 group-hover:from-indigo-600/5 group-hover:to-purple-600/5 transition-all duration-500 pointer-events-none" />
 
       {/* Header */}
-      <div className="flex items-start justify-between mb-4">
+      <div className="flex items-start justify-between mb-5">
         <div>
           {project.featured && (
-            <span className="text-[10px] font-bold uppercase tracking-widest text-indigo-400 mb-2 block">
+            <span className="text-[10px] font-bold uppercase tracking-widest text-indigo-400 mb-1.5 block">
               Featured Project
             </span>
           )}
@@ -75,21 +75,15 @@ function ProjectCard({ project, index, inView }) {
         </div>
       </div>
 
-      {/* Problem → Solution → Impact */}
-      <div className="space-y-3 mb-6 flex-1">
-        {[
-          { label: 'Problem', text: project.problem, color: 'text-red-400' },
-          { label: 'Solution', text: project.solution, color: 'text-blue-400' },
-          { label: 'Impact', text: project.impact, color: 'text-green-400' },
-        ].map(({ label, text, color }) => (
-          <div key={label} className="flex gap-3">
-            <span className={`text-xs font-bold uppercase tracking-wider mt-0.5 w-16 flex-shrink-0 ${color}`}>
-              {label}
-            </span>
-            <span className="text-gray-400 text-sm leading-relaxed">{text}</span>
-          </div>
+      {/* Bullet points */}
+      <ul className="space-y-2.5 mb-6 flex-1">
+        {project.bullets.map((b, i) => (
+          <li key={i} className="flex gap-3 text-gray-400 text-sm leading-relaxed">
+            <span className="text-indigo-500 mt-1.5 flex-shrink-0 text-xs">▸</span>
+            <span>{b}</span>
+          </li>
         ))}
-      </div>
+      </ul>
 
       {/* Tech stack */}
       <div className="flex flex-wrap gap-2 pt-4 border-t border-white/5">
@@ -107,7 +101,7 @@ export default function Projects() {
 
   return (
     <section id="projects" className="section-padding bg-[#0d0d0d]">
-      <div className="max-w-5xl mx-auto" ref={ref}>
+      <div className="max-w-6xl mx-auto" ref={ref}>
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={inView ? { opacity: 1, y: 0 } : {}}
@@ -132,7 +126,8 @@ export default function Projects() {
           </div>
         </motion.div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+        {/* 2-column grid */}
+        <div className="grid md:grid-cols-2 gap-6">
           {projects.map((project, i) => (
             <ProjectCard key={project.title} project={project} index={i} inView={inView} />
           ))}

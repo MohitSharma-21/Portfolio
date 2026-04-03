@@ -1,7 +1,7 @@
 // Resume Data - single source of truth
 
 export const personal = {
-  name: "Mohit Kumar Sharma",
+  name: "Mohit Sharma",
   title: "Software Engineer",
   tagline: "Building scalable systems · Leveraging AI · Shipping impact",
   email: "mohitkumar.sharma.july21@gmail.com",
@@ -14,12 +14,15 @@ export const personal = {
 
 export const about = {
   summary:
-    "Software Engineer at Microsoft with a passion for building scalable, high-impact systems. I bridge backend engineering with AI integration — from optimizing hardware utilization for Microsoft Teams to designing conversational LLM-powered copilots. Graduated from IIT BHU, I thrive on hard problems, clean code, and measurable outcomes.",
+    "Software Engineer specializing in scalable systems, automation, and AI-driven solutions. Experienced in C++, Python, JavaScript, and full-stack development — with a strong focus on performance optimization and data-driven insights.",
+  passion:
+    "Passionate about solving complex problems, building impactful products, and continuously learning emerging technologies to deliver high-quality, user-centric solutions at scale.",
+  interests: ["Travelling", "Sports", "Movies", "Adventure"],
   highlights: [
-    { label: "Scalable Systems", desc: "Designed and shipped production systems serving millions of users" },
-    { label: "AI Integration", desc: "Built LLM-powered features using Microsoft's AI frameworks" },
-    { label: "Performance Focus", desc: "Improved hardware utilization from 88% to 90%+ via telemetry analysis" },
-    { label: "Problem Solver", desc: "800+ coding challenges solved across LeetCode and GeeksforGeeks" },
+    { label: "Scalable Systems", desc: "Designed and shipped production-grade systems built to scale reliably under high demand" },
+    { label: "AI Integration", desc: "Built LLM-powered features and AI-driven solutions to enhance user experience and automate workflows" },
+    { label: "Performance Focus", desc: "Deep focus on performance optimization — profiling bottlenecks, improving throughput, and reducing latency" },
+    { label: "Problem Solver", desc: "800+ coding challenges solved across LeetCode, GeeksforGeeks, and other competitive platforms" },
   ],
 };
 
@@ -87,7 +90,7 @@ export const experience = [
     location: "Remote",
     duration: "Dec 2022",
     logo: "WL",
-    color: "#10b981",
+    color: "#00a4ef",
     bullets: [
       "Revamped the Warelogg React web app — improved UI/UX, responsiveness, and cross-device compatibility for a seamless user experience.",
       "Built Node.js backend endpoints to manage warehouse records with admin-level access control, ensuring secure and accurate data operations.",
@@ -100,41 +103,54 @@ export const projects = [
   {
     title: "Picture Manager Application",
     tagline: "Face-Recognition powered photo organizer",
-    description:
-      "A full-stack web app that uses facial recognition to automatically categorize images into individual and group folders. Secured with JWT-based auth protecting all API endpoints.",
-    problem: "Manual photo organization is tedious and does not scale.",
-    solution: "Automated categorization via face-api.js with secure JWT-gated APIs.",
-    impact: "Reduced photo sorting time to zero — fully automated pipeline.",
+    bullets: [
+      "Developed a secure web-based Picture Manager application with Face Recognition-based authentication, integrating JWT for robust user/admin authorization and protection of API endpoints.",
+      "Implemented facial recognition pipelines to automatically detect and group individuals in images, enabling intelligent categorization into personal and group-based folders for efficient photo organization.",
+      "Designed and built scalable backend services with CRUD operations for event-based photo management using MongoDB, ensuring efficient data storage, retrieval, and handling.",
+    ],
     tech: ["Next.js", "Node.js", "Express.js", "Face-api.js", "MongoDB", "Tailwind CSS"],
-    github: "https://github.com/MohitSharma-21",
+    github: "https://github.com/MohitSharma-21/Engage-22-Project-Frontend",
     live: null,
     featured: true,
   },
   {
-    title: "Teams Hardware Telemetry Dashboard",
-    tagline: "Real-time codec health monitoring",
-    description:
-      "Built Power BI dashboards using KQL queries on telemetry data to track H264 encoder/decoder frame drops and hardware utilization across the Microsoft Teams fleet.",
-    problem: "No unified view of hardware codec health across millions of Teams sessions.",
-    solution: "Custom KQL queries + Power BI dashboards + proactive alerting pipeline.",
-    impact: "Boosted hardware utilization from 88% to 90%+; early anomaly detection.",
-    tech: ["KQL", "Power BI", "Python", "C++"],
-    github: "https://github.com/MohitSharma-21",
+    title: "Autonomous Path Mapping Robot",
+    tagline: "AI-driven robot navigation with computer vision",
+    bullets: [
+      "Developed an autonomous path-planning robot using Dijkstra's Algorithm to compute optimal routes minimizing traversal cost across a dynamic hexagonal arena.",
+      "Implemented computer vision techniques (color segmentation, shape detection, ArUco marker tracking) to extract real-time positional data and identify key objects from an overhead camera feed.",
+      "Engineered an end-to-end decision system integrating path optimization with constraint handling — ordered task execution and obstacle avoidance — enabling efficient multi-stage navigation.",
+    ],
+    tech: ["OpenCV", "NumPy", "Python", "Dijkstra's Algorithm", "DSA"],
+    github: "https://github.com/MohitSharma-21/Pixelate-22",
     live: null,
     featured: true,
   },
   {
-    title: "TAC Copilot Conversational UI",
-    tagline: "LLM-powered enterprise assistant",
-    description:
-      "Developed multi-turn conversational interactions for the TAC Co-pilot using Microsoft's LLM framework — chiclet inputs, intent recognition, and M365-aligned UX.",
-    problem: "Support agents spent excessive time navigating static knowledge bases.",
-    solution: "Integrated LLM with intent/entity extraction and intuitive chiclet-based UI.",
-    impact: "Improved query resolution speed and user satisfaction scores.",
-    tech: ["React", "TypeScript", "REST APIs", "Prompt Engineering"],
+    title: "Handwritten Captcha Recognizer",
+    tagline: "CNN-based CAPTCHA decoding pipeline",
+    bullets: [
+      "Developed a handwritten CAPTCHA recognition system using Convolutional Neural Networks (CNNs) to accurately classify distorted alphanumeric characters, achieving ~85% model accuracy.",
+      "Implemented an image preprocessing and segmentation pipeline using OpenCV — noise reduction, thresholding, and character isolation — to improve model input quality and prediction performance.",
+      "Integrated an end-to-end pipeline combining image processing and model inference to automatically decode CAPTCHA inputs, enhancing automation capabilities.",
+    ],
+    tech: ["Python", "TensorFlow", "CNN", "OpenCV"],
     github: "https://github.com/MohitSharma-21",
     live: null,
-    featured: true,
+    featured: false,
+  },
+  {
+    title: "Open-Source Contributions",
+    tagline: "OrcaSound & COPS-SDG IIT BHU",
+    bullets: [
+      "Contributed to open-source projects under the OrcaSound Organization (Orcahome) and COPS-SDG IIT BHU, collaborating with distributed teams to enhance platform functionality and usability.",
+      "Developed and improved features, fixed bugs, and optimized codebases, ensuring better performance, maintainability, and adherence to coding standards in real-world production environments.",
+      "Leveraged Git/GitHub for code contributions, pull requests, and peer reviews, following open-source best practices and collaborative workflows.",
+    ],
+    tech: ["Git", "GitHub", "Open Source"],
+    github: "https://github.com/MohitSharma-21",
+    live: null,
+    featured: false,
   },
 ];
 
@@ -172,7 +188,6 @@ export const achievements = [
 
 export const currentlyLearning = [
   { topic: "System Design", detail: "Distributed systems, CAP theorem, consistent hashing" },
-  { topic: "LLM Engineering", detail: "RAG, fine-tuning, agentic workflows" },
-  { topic: "Cloud Architecture", detail: "Azure services, microservices, Kubernetes" },
-  { topic: "Rust", detail: "Memory safety, performance-critical applications" },
+  { topic: "LLM Engineering", detail: "Prompt engineering, agentic workflows" },
+  { topic: "Cloud Architecture", detail: "Azure services, microservices" },
 ];

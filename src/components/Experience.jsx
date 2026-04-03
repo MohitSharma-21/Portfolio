@@ -32,9 +32,13 @@ function ExperienceCard({ exp, index, inView, isLast }) {
         <div className="absolute left-3 top-10 bottom-0 w-px bg-gradient-to-b from-indigo-500/30 to-transparent" />
       )}
 
-      {/* Timeline dot */}
-      <div className="absolute left-0 top-2 w-6 h-6 rounded-full bg-[#1a1a1a] border-2 border-indigo-500/60 flex items-center justify-center">
-        <div className="w-2 h-2 rounded-full bg-indigo-400" />
+      {/* Timeline dot — green for current role, indigo for past */}
+      <div className={`absolute left-0 top-2 w-6 h-6 rounded-full bg-[#1a1a1a] border-2 flex items-center justify-center ${
+        exp.duration.includes('Present') ? 'border-green-500/60' : 'border-indigo-500/60'
+      }`}>
+        <div className={`w-2 h-2 rounded-full ${
+          exp.duration.includes('Present') ? 'bg-green-400 animate-pulse' : 'bg-indigo-400'
+        }`} />
       </div>
 
       {/* Card */}

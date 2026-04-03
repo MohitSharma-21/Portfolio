@@ -67,8 +67,7 @@ export default function Hero() {
           variants={item}
           className="text-5xl md:text-7xl lg:text-8xl font-black tracking-tight text-white mb-4 leading-none"
         >
-          Mohit Kumar{' '}
-          <span className="gradient-text">Sharma</span>
+          <span className="gradient-text">Mohit Sharma</span>
         </motion.h1>
 
         {/* Title */}

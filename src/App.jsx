@@ -29,11 +29,11 @@ export default function App() {
         {/* 3. Skills — languages, frameworks, tools */}
         <Skills />
 
-        {/* 4. Projects — featured work with problem/solution/impact */}
-        <Projects />
-
-        {/* 5. Experience — timeline with achievement-focused bullets */}
+        {/* 4. Experience — timeline with achievement-focused bullets */}
         <Experience />
+
+        {/* 5. Projects — featured work with bullet points */}
+        <Projects />
 
         {/* 6. Education — IIT BHU */}
         <Education />

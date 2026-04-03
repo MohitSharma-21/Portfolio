@@ -6,8 +6,9 @@ import { personal } from '../data/resumeData';
 const navLinks = [
   { label: 'About', href: '#about' },
   { label: 'Skills', href: '#skills' },
-  { label: 'Projects', href: '#projects' },
   { label: 'Experience', href: '#experience' },
+  { label: 'Projects', href: '#projects' },
+  { label: 'Academics', href: '#education' },
   { label: 'Contact', href: '#contact' },
 ];
 
@@ -56,11 +57,10 @@ export default function Navbar() {
         {/* Logo / Name */}
         <motion.button
           onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
-          className="text-white font-bold text-lg tracking-tight hover:text-indigo-400 transition-colors"
+          className="text-white font-semibold text-base tracking-wide hover:text-indigo-400 transition-colors"
           whileHover={{ scale: 1.04 }}
         >
-          <span className="gradient-text">MK</span>
-          <span className="text-gray-400 font-light ml-2 text-sm hidden sm:inline">Sharma</span>
+          Mohit Sharma
         </motion.button>
 
         {/* Desktop nav links */}
