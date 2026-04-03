@@ -1,0 +1,134 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 220" width="600" height="220">
+  <defs>
+    <linearGradient id="bg2" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0d0d0d"/>
+      <stop offset="100%" style="stop-color:#0d1a0d"/>
+    </linearGradient>
+    <filter id="glow2">
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+
+  <rect width="600" height="220" fill="url(#bg2)" rx="12"/>
+
+  <!-- Grid dots -->
+  <pattern id="dots2" x="0" y="0" width="24" height="24" patternUnits="userSpaceOnUse">
+    <circle cx="1" cy="1" r="1" fill="#ffffff06"/>
+  </pattern>
+  <rect width="600" height="220" fill="url(#dots2)" rx="12"/>
+
+  <!-- Hexagonal arena grid (left side) -->
+  <!-- Hex helper: pointy-top hexagons, size r=22 -->
+  <!-- Row 0 (y offset 0) -->
+  <polygon points="110,30 132,18 154,30 154,54 132,66 110,54" fill="#111a11" stroke="#22c55e20" stroke-width="1"/>
+  <polygon points="154,30 176,18 198,30 198,54 176,66 154,54" fill="#111a11" stroke="#22c55e20" stroke-width="1"/>
+  <polygon points="198,30 220,18 242,30 242,54 220,66 198,54" fill="#111a11" stroke="#22c55e20" stroke-width="1"/>
+  <polygon points="242,30 264,18 286,30 286,54 264,66 242,54" fill="#111a11" stroke="#22c55e20" stroke-width="1"/>
+
+  <!-- Row 1 offset -->
+  <polygon points="88,66 110,54 132,66 132,90 110,102 88,90" fill="#111a11" stroke="#22c55e20" stroke-width="1"/>
+  <polygon points="132,66 154,54 176,66 176,90 154,102 132,90" fill="#0d200d" stroke="#22c55e30" stroke-width="1"/>
+  <polygon points="176,66 198,54 220,66 220,90 198,102 176,90" fill="#111a11" stroke="#22c55e20" stroke-width="1"/>
+  <polygon points="220,66 242,54 264,66 264,90 242,102 220,90" fill="#111a11" stroke="#22c55e20" stroke-width="1"/>
+  <polygon points="264,66 286,54 308,66 308,90 286,102 264,90" fill="#111a11" stroke="#22c55e20" stroke-width="1"/>
+
+  <!-- Row 2 -->
+  <polygon points="110,102 132,90 154,102 154,126 132,138 110,126" fill="#111a11" stroke="#22c55e20" stroke-width="1"/>
+  <polygon points="154,102 176,90 198,102 198,126 176,138 154,126" fill="#0d200d" stroke="#22c55e30" stroke-width="1"/>
+  <polygon points="198,102 220,90 242,102 242,126 220,138 198,126" fill="#0d200d" stroke="#22c55e40" stroke-width="1.5"/>
+  <polygon points="242,102 264,90 286,102 286,126 264,138 242,126" fill="#111a11" stroke="#22c55e20" stroke-width="1"/>
+  <polygon points="286,102 308,90 330,102 330,126 308,138 286,126" fill="#111a11" stroke="#22c55e20" stroke-width="1"/>
+
+  <!-- Row 3 offset -->
+  <polygon points="88,138 110,126 132,138 132,162 110,174 88,162" fill="#111a11" stroke="#22c55e20" stroke-width="1"/>
+  <polygon points="132,138 154,126 176,138 176,162 154,174 132,162" fill="#111a11" stroke="#22c55e20" stroke-width="1"/>
+  <polygon points="176,138 198,126 220,138 220,162 198,174 176,162" fill="#0d200d" stroke="#22c55e30" stroke-width="1"/>
+  <polygon points="220,138 242,126 264,138 264,162 242,174 220,162" fill="#0d200d" stroke="#22c55e40" stroke-width="1.5"/>
+  <polygon points="264,138 286,126 308,138 308,162 286,174 264,162" fill="#111a11" stroke="#22c55e20" stroke-width="1"/>
+
+  <!-- Row 4 -->
+  <polygon points="110,174 132,162 154,174 154,198 132,210 110,198" fill="#111a11" stroke="#22c55e20" stroke-width="1"/>
+  <polygon points="154,174 176,162 198,174 198,198 176,210 154,198" fill="#111a11" stroke="#22c55e20" stroke-width="1"/>
+  <polygon points="198,174 220,162 242,174 242,198 220,210 198,198" fill="#111a11" stroke="#22c55e20" stroke-width="1"/>
+  <polygon points="242,174 264,162 286,174 286,198 264,210 242,198" fill="#111a11" stroke="#22c55e20" stroke-width="1"/>
+
+  <!-- Optimal path (highlighted hexagons glow) -->
+  <!-- Start node -->
+  <polygon points="110,30 132,18 154,30 154,54 132,66 110,54" fill="#22c55e25" stroke="#22c55e" stroke-width="2" filter="url(#glow2)"/>
+  <text x="132" y="45" font-family="monospace" font-size="8" fill="#22c55e" text-anchor="middle" font-weight="bold">S</text>
+
+  <!-- Path nodes highlighted -->
+  <polygon points="154,30 176,18 198,30 198,54 176,66 154,54" fill="#22c55e15" stroke="#22c55e60" stroke-width="1.5"/>
+  <polygon points="154,102 176,90 198,102 198,126 176,138 154,126" fill="#22c55e15" stroke="#22c55e60" stroke-width="1.5"/>
+  <polygon points="198,102 220,90 242,102 242,126 220,138 198,126" fill="#22c55e20" stroke="#22c55e80" stroke-width="1.5"/>
+  <polygon points="220,138 242,126 264,138 264,162 242,174 220,162" fill="#22c55e20" stroke="#22c55e80" stroke-width="1.5"/>
+
+  <!-- End node -->
+  <polygon points="242,174 264,162 286,174 286,198 264,210 242,198" fill="#22c55e25" stroke="#22c55e" stroke-width="2" filter="url(#glow2)"/>
+  <text x="264" y="189" font-family="monospace" font-size="8" fill="#22c55e" text-anchor="middle" font-weight="bold">E</text>
+
+  <!-- Dijkstra path arrows -->
+  <line x1="154" y1="42" x2="176" y2="42" stroke="#22c55e" stroke-width="1.5" stroke-dasharray="4,3" marker-end="url(#arrow)"/>
+  <line x1="176" y1="66" x2="176" y2="90" stroke="#22c55e" stroke-width="1.5" stroke-dasharray="4,3"/>
+  <line x1="176" y1="114" x2="220" y2="114" stroke="#22c55e" stroke-width="1.5" stroke-dasharray="4,3"/>
+  <line x1="220" y1="126" x2="242" y2="150" stroke="#22c55e" stroke-width="1.5" stroke-dasharray="4,3"/>
+  <line x1="242" y1="174" x2="264" y2="186" stroke="#22c55e" stroke-width="1.5" stroke-dasharray="4,3"/>
+
+  <defs>
+    <marker id="arrow" markerWidth="6" markerHeight="6" refX="3" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L6,3 z" fill="#22c55e"/>
+    </marker>
+  </defs>
+
+  <!-- Robot marker on path -->
+  <circle cx="220" cy="114" r="10" fill="#22c55e20" stroke="#22c55e" stroke-width="1.5" filter="url(#glow2)"/>
+  <rect x="215" y="108" width="10" height="8" rx="2" fill="#22c55e"/>
+  <circle cx="218" cy="107" r="1.5" fill="#22c55e80"/>
+  <circle cx="222" cy="107" r="1.5" fill="#22c55e80"/>
+
+  <!-- ArUco marker (top-right of hex grid) -->
+  <rect x="270" y="18" width="24" height="24" rx="2" fill="#111a11" stroke="#22c55e40" stroke-width="1"/>
+  <rect x="272" y="20" width="8" height="8" fill="#22c55e80"/>
+  <rect x="284" y="20" width="8" height="8" fill="none" stroke="#22c55e60" stroke-width="1"/>
+  <rect x="272" y="32" width="8" height="8" fill="none" stroke="#22c55e60" stroke-width="1"/>
+  <rect x="284" y="32" width="8" height="8" fill="#22c55e80"/>
+  <rect x="278" y="26" width="4" height="4" fill="#22c55e40"/>
+  <text x="282" y="54" font-family="monospace" font-size="7" fill="#22c55e60" text-anchor="middle">ArUco</text>
+
+  <!-- Right panel: algo info -->
+  <rect x="340" y="20" width="240" height="180" rx="10" fill="#0d150d" stroke="#22c55e15" stroke-width="1"/>
+
+  <!-- Dijkstra label -->
+  <text x="360" y="46" font-family="monospace" font-size="13" fill="#22c55e" font-weight="bold">Dijkstra's</text>
+  <text x="360" y="62" font-family="monospace" font-size="13" fill="#22c55e" font-weight="bold">Algorithm</text>
+
+  <!-- Stats -->
+  <line x1="356" y1="72" x2="564" y2="72" stroke="#22c55e15" stroke-width="1"/>
+
+  <text x="360" y="90" font-family="monospace" font-size="8" fill="#22c55e60">Nodes explored</text>
+  <text x="540" y="90" font-family="monospace" font-size="8" fill="#22c55e" text-anchor="end">24</text>
+  <rect x="360" y="94" width="180" height="4" rx="2" fill="#22c55e15"/>
+  <rect x="360" y="94" width="96" height="4" rx="2" fill="#22c55e"/>
+
+  <text x="360" y="114" font-family="monospace" font-size="8" fill="#22c55e60">Path cost</text>
+  <text x="540" y="114" font-family="monospace" font-size="8" fill="#22c55e" text-anchor="end">142</text>
+  <rect x="360" y="118" width="180" height="4" rx="2" fill="#22c55e15"/>
+  <rect x="360" y="118" width="128" height="4" rx="2" fill="#22c55e80"/>
+
+  <text x="360" y="138" font-family="monospace" font-size="8" fill="#22c55e60">Obstacles avoided</text>
+  <text x="540" y="138" font-family="monospace" font-size="8" fill="#22c55e" text-anchor="end">7</text>
+
+  <!-- Computer vision chips -->
+  <line x1="356" y1="148" x2="564" y2="148" stroke="#22c55e15" stroke-width="1"/>
+  <text x="360" y="164" font-family="monospace" font-size="8" fill="#22c55e50">Computer Vision</text>
+
+  <rect x="360" y="170" width="58" height="18" rx="4" fill="#22c55e15" stroke="#22c55e30" stroke-width="1"/>
+  <text x="389" y="182" font-family="monospace" font-size="7" fill="#22c55e" text-anchor="middle">OpenCV</text>
+
+  <rect x="424" y="170" width="58" height="18" rx="4" fill="#22c55e15" stroke="#22c55e30" stroke-width="1"/>
+  <text x="453" y="182" font-family="monospace" font-size="7" fill="#22c55e" text-anchor="middle">NumPy</text>
+
+  <rect x="488" y="170" width="58" height="18" rx="4" fill="#22c55e15" stroke="#22c55e30" stroke-width="1"/>
+  <text x="517" y="182" font-family="monospace" font-size="7" fill="#22c55e" text-anchor="middle">Python</text>
+</svg>

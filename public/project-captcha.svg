@@ -1,0 +1,131 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 220" width="600" height="220">
+  <defs>
+    <linearGradient id="bg3" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0d0d0d"/>
+      <stop offset="100%" style="stop-color:#1a0d1a"/>
+    </linearGradient>
+    <filter id="glow3">
+      <feGaussianBlur stdDeviation="2.5" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+
+  <rect width="600" height="220" fill="url(#bg3)" rx="12"/>
+  <pattern id="dots3" x="0" y="0" width="24" height="24" patternUnits="userSpaceOnUse">
+    <circle cx="1" cy="1" r="1" fill="#ffffff06"/>
+  </pattern>
+  <rect width="600" height="220" fill="url(#dots3)" rx="12"/>
+
+  <!-- Left: Distorted CAPTCHA input -->
+  <rect x="20" y="70" width="120" height="80" rx="8" fill="#110d11" stroke="#a855f730" stroke-width="1"/>
+  <!-- Noise lines on captcha -->
+  <line x1="24" y1="90" x2="136" y2="115" stroke="#a855f720" stroke-width="1"/>
+  <line x1="24" y1="110" x2="136" y2="85" stroke="#a855f720" stroke-width="1"/>
+  <line x1="50" y1="72" x2="90" y2="148" stroke="#a855f715" stroke-width="1"/>
+  <!-- Distorted characters -->
+  <text x="35" y="120" font-family="serif" font-size="26" fill="#e2e8f0" transform="rotate(-8, 35, 120)" opacity="0.9">A</text>
+  <text x="58" y="118" font-family="serif" font-size="24" fill="#e2e8f0" transform="rotate(5, 58, 118)" opacity="0.85">8</text>
+  <text x="82" y="122" font-family="serif" font-size="25" fill="#e2e8f0" transform="rotate(-4, 82, 122)" opacity="0.9">K</text>
+  <text x="106" y="116" font-family="serif" font-size="23" fill="#e2e8f0" transform="rotate(7, 106, 116)" opacity="0.85">p</text>
+  <!-- Noise dots on captcha -->
+  <circle cx="40" cy="80" r="1.5" fill="#a855f740"/>
+  <circle cx="100" cy="95" r="1" fill="#a855f740"/>
+  <circle cx="70" cy="140" r="1.5" fill="#a855f740"/>
+  <circle cx="125" cy="120" r="1" fill="#a855f740"/>
+  <text x="80" y="162" font-family="sans-serif" font-size="8" fill="#a855f760" text-anchor="middle">Raw Input</text>
+
+  <!-- Arrow: input → preprocessing -->
+  <line x1="145" y1="110" x2="168" y2="110" stroke="#a855f7" stroke-width="1.5" stroke-dasharray="4,3"/>
+  <polygon points="168,106 176,110 168,114" fill="#a855f7"/>
+
+  <!-- Middle: Preprocessing pipeline -->
+  <rect x="178" y="55" width="96" height="130" rx="8" fill="#130d13" stroke="#a855f720" stroke-width="1"/>
+  <text x="226" y="73" font-family="monospace" font-size="8" fill="#a855f7" text-anchor="middle" font-weight="bold">Preprocessing</text>
+  <line x1="185" y1="78" x2="267" y2="78" stroke="#a855f720" stroke-width="1"/>
+
+  <!-- Step 1 -->
+  <rect x="188" y="84" width="76" height="20" rx="4" fill="#a855f715" stroke="#a855f730" stroke-width="1"/>
+  <text x="226" y="97" font-family="monospace" font-size="7" fill="#a855f7" text-anchor="middle">Noise Reduction</text>
+
+  <!-- Step 2 -->
+  <rect x="188" y="110" width="76" height="20" rx="4" fill="#a855f715" stroke="#a855f730" stroke-width="1"/>
+  <text x="226" y="123" font-family="monospace" font-size="7" fill="#a855f7" text-anchor="middle">Thresholding</text>
+
+  <!-- Step 3 -->
+  <rect x="188" y="136" width="76" height="20" rx="4" fill="#a855f715" stroke="#a855f730" stroke-width="1"/>
+  <text x="226" y="149" font-family="monospace" font-size="7" fill="#a855f7" text-anchor="middle">Segmentation</text>
+
+  <!-- Connecting dots in pipeline -->
+  <line x1="226" y1="104" x2="226" y2="110" stroke="#a855f750" stroke-width="1"/>
+  <line x1="226" y1="130" x2="226" y2="136" stroke="#a855f750" stroke-width="1"/>
+
+  <!-- Segmented chars output -->
+  <text x="188" y="172" font-family="monospace" font-size="7" fill="#a855f760">[ A ][ 8 ][ K ][ p ]</text>
+
+  <!-- Arrow: preprocessing → CNN -->
+  <line x1="278" y1="110" x2="300" y2="110" stroke="#a855f7" stroke-width="1.5" stroke-dasharray="4,3"/>
+  <polygon points="300,106 308,110 300,114" fill="#a855f7"/>
+
+  <!-- CNN layers -->
+  <!-- Input layer -->
+  <rect x="308" y="46" width="16" height="128" rx="4" fill="#a855f710" stroke="#a855f740" stroke-width="1"/>
+  <text x="316" y="186" font-family="monospace" font-size="7" fill="#a855f760" text-anchor="middle">input</text>
+  <!-- Nodes input -->
+  <circle cx="316" cy="68" r="4" fill="#a855f740" stroke="#a855f7" stroke-width="1"/>
+  <circle cx="316" cy="86" r="4" fill="#a855f740" stroke="#a855f7" stroke-width="1"/>
+  <circle cx="316" cy="104" r="4" fill="#a855f740" stroke="#a855f7" stroke-width="1"/>
+  <circle cx="316" cy="122" r="4" fill="#a855f740" stroke="#a855f7" stroke-width="1"/>
+  <circle cx="316" cy="140" r="4" fill="#a855f740" stroke="#a855f7" stroke-width="1"/>
+  <circle cx="316" cy="158" r="4" fill="#a855f740" stroke="#a855f7" stroke-width="1"/>
+
+  <!-- Conv layer 1 -->
+  <rect x="335" y="56" width="16" height="108" rx="4" fill="#a855f715" stroke="#a855f750" stroke-width="1"/>
+  <text x="343" y="186" font-family="monospace" font-size="7" fill="#a855f770" text-anchor="middle">conv1</text>
+  <circle cx="343" cy="76" r="4" fill="#a855f750" stroke="#a855f7" stroke-width="1.5" filter="url(#glow3)"/>
+  <circle cx="343" cy="96" r="4" fill="#a855f750" stroke="#a855f7" stroke-width="1.5" filter="url(#glow3)"/>
+  <circle cx="343" cy="116" r="4" fill="#a855f750" stroke="#a855f7" stroke-width="1.5" filter="url(#glow3)"/>
+  <circle cx="343" cy="136" r="4" fill="#a855f750" stroke="#a855f7" stroke-width="1.5" filter="url(#glow3)"/>
+  <circle cx="343" cy="156" r="4" fill="#a855f750" stroke="#a855f7" stroke-width="1.5" filter="url(#glow3)"/>
+
+  <!-- Conv layer 2 -->
+  <rect x="362" y="62" width="16" height="96" rx="4" fill="#a855f720" stroke="#a855f760" stroke-width="1"/>
+  <text x="370" y="186" font-family="monospace" font-size="7" fill="#a855f780" text-anchor="middle">conv2</text>
+  <circle cx="370" cy="82" r="4" fill="#a855f760" stroke="#a855f7" stroke-width="1.5" filter="url(#glow3)"/>
+  <circle cx="370" cy="100" r="4" fill="#a855f760" stroke="#a855f7" stroke-width="1.5" filter="url(#glow3)"/>
+  <circle cx="370" cy="118" r="4" fill="#a855f760" stroke="#a855f7" stroke-width="1.5" filter="url(#glow3)"/>
+  <circle cx="370" cy="136" r="4" fill="#a855f760" stroke="#a855f7" stroke-width="1.5" filter="url(#glow3)"/>
+
+  <!-- Dense layer -->
+  <rect x="389" y="70" width="16" height="80" rx="4" fill="#a855f730" stroke="#a855f780" stroke-width="1"/>
+  <text x="397" y="186" font-family="monospace" font-size="7" fill="#a855f790" text-anchor="middle">dense</text>
+  <circle cx="397" cy="88" r="4" fill="#a855f780" stroke="#a855f7" stroke-width="2" filter="url(#glow3)"/>
+  <circle cx="397" cy="106" r="4" fill="#a855f780" stroke="#a855f7" stroke-width="2" filter="url(#glow3)"/>
+  <circle cx="397" cy="124" r="4" fill="#a855f780" stroke="#a855f7" stroke-width="2" filter="url(#glow3)"/>
+
+  <!-- Connection lines between layers (sample) -->
+  <line x1="320" y1="86" x2="339" y2="96" stroke="#a855f720" stroke-width="1"/>
+  <line x1="320" y1="104" x2="339" y2="96" stroke="#a855f720" stroke-width="1"/>
+  <line x1="320" y1="122" x2="339" y2="116" stroke="#a855f720" stroke-width="1"/>
+  <line x1="347" y1="96" x2="366" y2="100" stroke="#a855f730" stroke-width="1"/>
+  <line x1="347" y1="116" x2="366" y2="118" stroke="#a855f730" stroke-width="1"/>
+  <line x1="374" y1="100" x2="393" y2="106" stroke="#a855f740" stroke-width="1"/>
+  <line x1="374" y1="118" x2="393" y2="106" stroke="#a855f740" stroke-width="1"/>
+
+  <!-- Arrow out of CNN -->
+  <line x1="408" y1="110" x2="428" y2="110" stroke="#a855f7" stroke-width="1.5" stroke-dasharray="4,3"/>
+  <polygon points="428,106 436,110 428,114" fill="#a855f7"/>
+
+  <!-- Right: Output -->
+  <rect x="438" y="70" width="140" height="80" rx="8" fill="#130d13" stroke="#a855f730" stroke-width="1"/>
+  <text x="508" y="90" font-family="monospace" font-size="8" fill="#a855f7" text-anchor="middle" font-weight="bold">Decoded Output</text>
+
+  <!-- Clean output text -->
+  <text x="508" y="122" font-family="monospace" font-size="28" fill="#e2e8f0" text-anchor="middle" font-weight="bold" filter="url(#glow3)">A8Kp</text>
+
+  <!-- Accuracy badge -->
+  <rect x="452" y="136" width="112" height="20" rx="6" fill="#a855f720" stroke="#a855f740" stroke-width="1"/>
+  <text x="508" y="150" font-family="monospace" font-size="9" fill="#a855f7" text-anchor="middle">~85% accuracy</text>
+
+  <!-- Label -->
+  <text x="300" y="210" font-family="monospace" font-size="8" fill="#a855f750" text-anchor="middle">Python · TensorFlow · CNN · OpenCV</text>
+</svg>

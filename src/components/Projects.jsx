@@ -30,6 +30,18 @@ function ProjectCard({ project, index, inView }) {
       {/* Hover glow */}
       <div className="absolute inset-0 rounded-2xl bg-gradient-to-br from-indigo-600/0 to-purple-600/0 group-hover:from-indigo-600/5 group-hover:to-purple-600/5 transition-all duration-500 pointer-events-none" />
 
+      {/* Project illustration */}
+      {project.image && (
+        <div className="rounded-xl overflow-hidden mb-5 border border-white/5">
+          <img
+            src={project.image}
+            alt={project.title}
+            className="w-full h-auto object-cover"
+            loading="lazy"
+          />
+        </div>
+      )}
+
       {/* Header */}
       <div className="flex items-start justify-between mb-5">
         <div>

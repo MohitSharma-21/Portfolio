@@ -67,7 +67,6 @@ export const experience = [
       "Engineered automated test workflows using Microsoft's internal framework to trigger & track execution across distributed remote machines, cutting manual overhead significantly.",
       "Built Power BI dashboards with Kusto (KQL) queries for real-time visibility into test execution status and failure trends; integrated an alerting system to proactively surface anomalous failures.",
       "Elevated H264 hardware encoder utilization for Microsoft Teams from 88% to 90%+ by deep-diving into telemetry data and hardware-related bugs; introduced new metrics tracking encoder/decoder frame drops.",
-      "Owned end-to-end validation and troubleshooting for a terminal-based Teams video-calling tool, resolving critical blockers ahead of release milestones.",
     ],
     tech: ["C++", "Python", "KQL", "Power BI"],
   },
@@ -103,6 +102,7 @@ export const projects = [
   {
     title: "Picture Manager Application",
     tagline: "Face-Recognition powered photo organizer",
+    image: "/project-picture-manager.svg",
     bullets: [
       "Developed a secure web-based Picture Manager application with Face Recognition-based authentication, integrating JWT for robust user/admin authorization and protection of API endpoints.",
       "Implemented facial recognition pipelines to automatically detect and group individuals in images, enabling intelligent categorization into personal and group-based folders for efficient photo organization.",
@@ -116,6 +116,7 @@ export const projects = [
   {
     title: "Autonomous Path Mapping Robot",
     tagline: "AI-driven robot navigation with computer vision",
+    image: "/project-path-robot.svg",
     bullets: [
       "Developed an autonomous path-planning robot using Dijkstra's Algorithm to compute optimal routes minimizing traversal cost across a dynamic hexagonal arena.",
       "Implemented computer vision techniques (color segmentation, shape detection, ArUco marker tracking) to extract real-time positional data and identify key objects from an overhead camera feed.",
@@ -129,6 +130,7 @@ export const projects = [
   {
     title: "Handwritten Captcha Recognizer",
     tagline: "CNN-based CAPTCHA decoding pipeline",
+    image: "/project-captcha.svg",
     bullets: [
       "Developed a handwritten CAPTCHA recognition system using Convolutional Neural Networks (CNNs) to accurately classify distorted alphanumeric characters, achieving ~85% model accuracy.",
       "Implemented an image preprocessing and segmentation pipeline using OpenCV — noise reduction, thresholding, and character isolation — to improve model input quality and prediction performance.",
@@ -142,6 +144,7 @@ export const projects = [
   {
     title: "Open-Source Contributions",
     tagline: "OrcaSound & COPS-SDG IIT BHU",
+    image: "/project-opensource.svg",
     bullets: [
       "Contributed to open-source projects under the OrcaSound Organization (Orcahome) and COPS-SDG IIT BHU, collaborating with distributed teams to enhance platform functionality and usability.",
       "Developed and improved features, fixed bugs, and optimized codebases, ensuring better performance, maintainability, and adherence to coding standards in real-world production environments.",
