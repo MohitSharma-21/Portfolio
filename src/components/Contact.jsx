@@ -76,9 +76,9 @@ export default function Contact() {
                   <link.icon size={16} className="text-white" />
                 </div>
               </div>
-              <div>
+              <div className="min-w-0 flex-1">
                 <p className="text-gray-600 text-xs font-medium uppercase tracking-wider">{link.label}</p>
-                <p className="text-gray-300 text-sm font-medium group-hover:text-white transition-colors">
+                <p className="text-gray-300 text-sm font-medium group-hover:text-white transition-colors truncate">
                   {link.value}
                 </p>
               </div>
