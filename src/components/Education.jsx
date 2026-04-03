@@ -34,27 +34,31 @@ export default function Education() {
           initial={{ opacity: 0, y: 30 }}
           animate={inView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.6, delay: 0.15 }}
-          className="glass-card rounded-2xl p-8 hover:border-indigo-500/20 transition-colors"
+          className="glass-card rounded-2xl p-5 sm:p-8 hover:border-indigo-500/20 transition-colors"
         >
           {/* Institution header */}
-          <div className="flex items-start gap-5">
-            <div className="w-14 h-14 rounded-2xl bg-indigo-500/10 border border-indigo-500/20 flex items-center justify-center flex-shrink-0">
-              <GraduationCap size={26} className="text-indigo-400" />
+          <div className="flex items-start gap-4">
+            <div className="w-12 h-12 sm:w-14 sm:h-14 rounded-2xl bg-indigo-500/10 border border-indigo-500/20 flex items-center justify-center flex-shrink-0">
+              <GraduationCap size={24} className="text-indigo-400" />
             </div>
 
-            <div className="flex-1">
-              <h3 className="text-white font-bold text-xl leading-tight mb-1">
-                {education.institution}
-              </h3>
-              <p className="text-gray-400 text-sm font-medium mb-1">{education.degree}</p>
-              <p className="text-gray-600 text-xs">{education.duration}</p>
-            </div>
+            <div className="flex-1 min-w-0">
+              <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-2">
+                <div className="min-w-0">
+                  <h3 className="text-white font-bold text-lg sm:text-xl leading-tight mb-1">
+                    {education.institution}
+                  </h3>
+                  <p className="text-gray-400 text-sm font-medium mb-1">{education.degree}</p>
+                  <p className="text-gray-600 text-xs">{education.duration}</p>
+                </div>
 
-            {/* CGPA badge */}
-            <div className="flex-shrink-0 text-right">
-              <div className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-amber-500/10 border border-amber-500/25">
-                <Star size={12} className="text-amber-400" />
-                <span className="text-amber-400 font-bold text-sm">CGPA {education.cgpa}</span>
+                {/* CGPA badge */}
+                <div className="flex-shrink-0 sm:text-right">
+                  <div className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-amber-500/10 border border-amber-500/25">
+                    <Star size={12} className="text-amber-400" />
+                    <span className="text-amber-400 font-bold text-sm">CGPA {education.cgpa}</span>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
