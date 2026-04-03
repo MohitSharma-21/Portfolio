@@ -78,7 +78,7 @@ export default function Contact() {
               </div>
               <div className="min-w-0 flex-1">
                 <p className="text-gray-600 text-xs font-medium uppercase tracking-wider">{link.label}</p>
-                <p className="text-gray-300 text-sm font-medium group-hover:text-white transition-colors truncate">
+                <p className="text-gray-300 text-sm font-medium group-hover:text-white transition-colors break-all">
                   {link.value}
                 </p>
               </div>
