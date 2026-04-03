@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Menu, X } from 'lucide-react';
+import { Menu, X, Eye, Download } from 'lucide-react';
 import { personal } from '../data/resumeData';
 
 const navLinks = [
@@ -87,16 +87,28 @@ export default function Navbar() {
           ))}
         </div>
 
-        {/* Resume download CTA */}
-        <div className="hidden md:flex items-center gap-3">
+        {/* Resume split button */}
+        <div className="hidden md:flex items-center rounded-lg overflow-hidden border border-white/10 hover:border-indigo-500/40 transition-colors">
+          <motion.a
+            href={personal.resumePDF}
+            target="_blank"
+            rel="noopener noreferrer"
+            whileHover={{ backgroundColor: 'rgba(99,102,241,0.15)' }}
+            whileTap={{ scale: 0.97 }}
+            className="flex items-center gap-1.5 px-3 py-2 text-xs font-semibold text-gray-300 hover:text-white bg-white/5 border-r border-white/10 transition-colors"
+          >
+            <Eye size={13} />
+            View
+          </motion.a>
           <motion.a
             href={personal.resumePDF}
             download
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}
-            className="px-4 py-2 text-sm font-semibold rounded-lg bg-indigo-600 hover:bg-indigo-500 text-white transition-colors"
+            whileHover={{ backgroundColor: 'rgba(99,102,241,0.15)' }}
+            whileTap={{ scale: 0.97 }}
+            className="flex items-center gap-1.5 px-3 py-2 text-xs font-semibold text-gray-300 hover:text-white bg-white/5 transition-colors"
           >
-            Resume
+            <Download size={13} />
+            Download
           </motion.a>
         </div>
 
@@ -128,13 +140,23 @@ export default function Navbar() {
                 {link.label}
               </button>
             ))}
-            <a
-              href={personal.resumePDF}
-              download
-              className="mt-4 block text-center py-2.5 px-4 rounded-lg bg-indigo-600 text-white text-sm font-semibold"
-            >
-              Download Resume
-            </a>
+            <div className="mt-4 flex rounded-lg overflow-hidden border border-white/10">
+              <a
+                href={personal.resumePDF}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex-1 flex items-center justify-center gap-2 py-2.5 bg-white/5 text-gray-300 text-sm font-semibold border-r border-white/10"
+              >
+                <Eye size={14} /> View
+              </a>
+              <a
+                href={personal.resumePDF}
+                download
+                className="flex-1 flex items-center justify-center gap-2 py-2.5 bg-white/5 text-gray-300 text-sm font-semibold"
+              >
+                <Download size={14} /> Download
+              </a>
+            </div>
           </motion.div>
         )}
       </AnimatePresence>

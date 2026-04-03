@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import { ArrowDown, Github, Linkedin, Mail } from 'lucide-react';
+import { ArrowDown, Github, Linkedin, Mail, Eye, Download } from 'lucide-react';
 import { personal } from '../data/resumeData';
 
 // Floating particle blob component
@@ -102,15 +102,30 @@ export default function Hero() {
             View Projects
           </motion.button>
 
-          <motion.a
-            href={personal.resumePDF}
-            download
-            whileHover={{ scale: 1.05, y: -2 }}
-            whileTap={{ scale: 0.95 }}
-            className="px-8 py-3.5 rounded-xl border border-white/10 hover:border-indigo-500/50 text-gray-300 hover:text-white font-semibold text-sm tracking-wide bg-white/5 hover:bg-white/10 transition-all"
-          >
-            Download Resume
-          </motion.a>
+          {/* Resume split button: View | Download */}
+          <div className="flex rounded-xl overflow-hidden border border-white/10 hover:border-indigo-500/40 transition-colors">
+            <motion.a
+              href={personal.resumePDF}
+              target="_blank"
+              rel="noopener noreferrer"
+              whileHover={{ backgroundColor: 'rgba(99,102,241,0.12)' }}
+              whileTap={{ scale: 0.97 }}
+              className="flex items-center gap-2 px-5 py-3.5 bg-white/5 text-gray-300 hover:text-white font-semibold text-sm tracking-wide transition-colors border-r border-white/10"
+            >
+              <Eye size={15} />
+              View Resume
+            </motion.a>
+            <motion.a
+              href={personal.resumePDF}
+              download
+              whileHover={{ backgroundColor: 'rgba(99,102,241,0.12)' }}
+              whileTap={{ scale: 0.97 }}
+              className="flex items-center gap-2 px-5 py-3.5 bg-white/5 text-gray-300 hover:text-white font-semibold text-sm tracking-wide transition-colors"
+            >
+              <Download size={15} />
+              Download
+            </motion.a>
+          </div>
         </motion.div>
 
         {/* Social links */}
