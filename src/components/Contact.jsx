@@ -94,7 +94,7 @@ export default function Contact() {
         transition={{ duration: 0.6, delay: 0.5 }}
         className="max-w-5xl mx-auto mt-20 pt-8 border-t border-white/5 flex flex-col sm:flex-row justify-between items-center gap-4 text-gray-600 text-xs"
       >
-        <p>© 2024 Mohit Sharma. Crafted with React &amp; Tailwind.</p>
+        <p>© 2026 Mohit Sharma. Crafted with React &amp; Tailwind.</p>
         <div className="flex gap-4">
           <a href={personal.github} target="_blank" rel="noopener noreferrer" className="hover:text-indigo-400 transition-colors">GitHub</a>
           <a href={personal.linkedin} target="_blank" rel="noopener noreferrer" className="hover:text-indigo-400 transition-colors">LinkedIn</a>
