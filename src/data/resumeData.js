@@ -29,17 +29,17 @@ export const about = {
 export const skills = {
   languages: [
     { name: "C / C++", level: 90 },
-    { name: "Python", level: 85 },
+    { name: "Python", level: 90 },
     { name: "JavaScript", level: 88 },
     { name: "TypeScript", level: 75 },
-    { name: "KQL", level: 70 },
+    { name: "KQL", level: 80 },
   ],
   frameworks: [
-    { name: "React", level: 88 },
-    { name: "Next.js", level: 82 },
-    { name: "Node.js", level: 80 },
-    { name: "Vue.js", level: 70 },
-    { name: "Express.js", level: 78 },
+    { name: "React", level: 90 },
+    { name: "Next.js", level: 85 },
+    { name: "Node.js", level: 85 },
+    { name: "Vue.js", level: 80 },
+    { name: "Express.js", level: 88 },
   ],
   tools: [
     "Git / GitHub",
