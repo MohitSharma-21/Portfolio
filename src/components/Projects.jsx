@@ -32,7 +32,7 @@ function ProjectCard({ project, index, inView }) {
 
       {/* Project illustration */}
       {project.image && (
-        <div className="rounded-xl overflow-hidden mb-5 border border-white/5">
+        <div className="-mx-7 -mt-7 rounded-t-2xl overflow-hidden mb-5 border-b border-white/5">
           <img
             src={project.image}
             alt={project.title}
