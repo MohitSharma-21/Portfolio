@@ -64,9 +64,10 @@ export const experience = [
     logo: "MS",
     color: "#00a4ef",
     bullets: [
-      "Engineered automated test workflows using Microsoft's internal framework to trigger & track execution across distributed remote machines, cutting manual overhead significantly.",
-      "Built Power BI dashboards with Kusto (KQL) queries for real-time visibility into test execution status and failure trends; integrated an alerting system to proactively surface anomalous failures.",
-      "Elevated H264 hardware decoder utilization for Microsoft Teams from 88% to 90%+ by deep-diving into telemetry data and hardware-related bugs; introduced new metrics tracking encoder/decoder frame drops.",
+      "Implemented automated workflows using Microsoft's internal framework to trigger & track testcase execution across remote machines, cutting manual overhead significantly by 15%.",
+      "Developed real-time monitoring dashboards using Power BI and Kusto (KQL) queries to visualize test execution status and failure trends and integrated an alerting system to proactively detect anomalous failures.",
+      "Enhanced H264 hardware decoder utilization for Microsoft Teams from 88% to 90%+ by analyzing telemetry data, resolving hardware-level issues, and introducing metrics to track encoder/decoder frame drops.",
+      "Performed end-to-end testing, validation, and troubleshooting for Microsoft Teams video calling across diverse scenarios, vendors, and driver configurations, identifying and resolving critical issues to ensure release readiness."
     ],
     tech: ["C++", "Python", "KQL", "Power BI"],
   },
