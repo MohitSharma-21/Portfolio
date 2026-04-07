@@ -79,8 +79,8 @@ export const experience = [
     logo: "MS",
     color: "#00a4ef",
     bullets: [
-      "Designed and shipped multi-turn conversational UI for the TAC Co-pilot — built chiclet-based input components aligned with the M365 Copilot design system.",
-      "Leveraged Microsoft's LLM framework for intent recognition and entity extraction, improving conversational accuracy and overall user experience.",
+      "Designed and developed multi-turn conversational experiences for TAC Copilot, enhancing UI/UX by implementing intuitive chiclet-based inputs and aligning the interface with the M365 Copilot design system.",
+      "Leveraged Microsoft's LLM framework to interpret user queries through intent detection and entity extraction, improving conversational accuracy and overall user experience.",
     ],
     tech: ["React", "TypeScript", "REST APIs", "Prompt Engineering"],
   },
@@ -92,7 +92,7 @@ export const experience = [
     logo: "WL",
     color: "#00a4ef",
     bullets: [
-      "Revamped the Warelogg React web app — improved UI/UX, responsiveness, and cross-device compatibility for a seamless user experience.",
+      "Revamped the Warelogg React web app by improving UI/UX, responsiveness, and cross-device compatibility for a seamless user experience.",
       "Built Node.js backend endpoints to manage warehouse records with admin-level access control, ensuring secure and accurate data operations.",
     ],
     tech: ["React", "Node.js", "REST APIs"],
