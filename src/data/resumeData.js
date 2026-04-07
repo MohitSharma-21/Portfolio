@@ -66,7 +66,7 @@ export const experience = [
     bullets: [
       "Engineered automated test workflows using Microsoft's internal framework to trigger & track execution across distributed remote machines, cutting manual overhead significantly.",
       "Built Power BI dashboards with Kusto (KQL) queries for real-time visibility into test execution status and failure trends; integrated an alerting system to proactively surface anomalous failures.",
-      "Elevated H264 hardware encoder utilization for Microsoft Teams from 88% to 90%+ by deep-diving into telemetry data and hardware-related bugs; introduced new metrics tracking encoder/decoder frame drops.",
+      "Elevated H264 hardware decoder utilization for Microsoft Teams from 88% to 90%+ by deep-diving into telemetry data and hardware-related bugs; introduced new metrics tracking encoder/decoder frame drops.",
     ],
     tech: ["C++", "Python", "KQL", "Power BI"],
   },
