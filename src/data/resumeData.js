@@ -64,12 +64,12 @@ export const experience = [
     logo: "MS",
     color: "#00a4ef",
     bullets: [
-      "Implemented automated workflows using Microsoft's internal framework to trigger & track testcase execution across remote machines, cutting manual overhead significantly by 15%.",
-      "Developed real-time monitoring dashboards using Power BI and Kusto (KQL) queries to visualize test execution status and failure trends and integrated an alerting system to proactively detect anomalous failures.",
-      "Enhanced H264 hardware decoder utilization for Microsoft Teams from 88% to 90%+ by analyzing telemetry data, resolving hardware-level issues, and introducing metrics to track encoder/decoder frame drops.",
-      "Performed end-to-end testing, validation, and troubleshooting for Microsoft Teams video calling across diverse scenarios, vendors, and driver configurations, identifying and resolving critical issues to ensure release readiness."
+      "Designed and implemented a stale-while-revalidate caching layer (in-memory + on-disk + asynchronous background revalidation) for an expensive video encoder capability query in a real-time communications media stack, eliminating a 350ms blocking call on application startup.",
+      "Drove H.264 decoder hardware utilization on an Intel GPU Model  from 20–30% to 70%+, lifting overall Microsoft Teams video hardware utilization from 88% past 90%, by pinpointing root causes through field-telemetry analysis and partnering directly with Intel to whitelist qualified drivers. And introduced new telemetry metrics tracking hardware failures and encoder/decoder frame drops, enabling continuous monitoring and faster regression detection.",
+      "Designed and built a scalable distributed test execution and analytics system with real-time test tracking, automated failure analysis, intelligent alerting, and centralized dashboards, significantly reducing manual debugging effort and improving large-scale issue detection and overall test infrastructure reliability.",
+      "Led validation of a terminal-based application used by hardware partners to certify GPU drivers against Microsoft Teams video calling across H.264, H.265, and AV1 codecs. Delivered two major releases and stabilized 1,600+ test cases, eliminating crashes/failures and establishing a critical release gate safeguarding call quality for millions of Teams users worldwide."
     ],
-    tech: ["C++", "Python", "KQL", "Power BI"],
+    tech: ["C++", "Python","Multithreading & Concurrency","System Design", "KQL", "Power BI"],
   },
   {
     role: "Software Engineer Intern",
